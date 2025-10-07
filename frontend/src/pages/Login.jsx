@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const data = await loginApi(username, password);
-      login(data);
+      login({ token: data.token, ...data.user });
       toast.success("✅ Login successful!");
       navigate("/dashboard");
     } catch {
