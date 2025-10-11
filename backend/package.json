@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "test-db": "node test.js"
+    "test-db": "node test.js",
+    "build-src": "babel src --out-dir build --copy-files",
+    "build": "node build/server.js"
   },
   "keywords": [],
   "author": "",
